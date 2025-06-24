@@ -1,0 +1,10 @@
+services:
+  odbc-api-gateway:
+    container_name: odbc-api-gateway
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - ODBC_DSN=$ODBC_DSN
+      - ODBC_USER=$ODBC_USER
+      - ODBC_PASSWORD=$ODBC_PASSWORD
